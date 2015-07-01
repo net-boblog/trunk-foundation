@@ -12,6 +12,10 @@
         <module>trunk-core</module>
         <module>trunk-web</module>
     </modules>
-
+    <scm>
+        <url>https://github.com/TumbleweedLeaf/trunk-foundation</url>
+        <connection>scm:git:https://github.com/TumbleweedLeaf/trunk-foundation.git</connection>
+        <developerConnection>scm:git:https://github.com/TumbleweedLeaf/trunk-foundation.git</developerConnection>
+    </scm>
 
 </project>
