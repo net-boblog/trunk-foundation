@@ -1,7 +1,5 @@
 package com.tumbleweed.platform.trunk.util.hierarchical;
 
-import com.mittop.platform.soupe.core.model.HierarchicalEntity;
-
 import java.util.LinkedHashSet;
 import java.util.List;
 import java.util.Set;
