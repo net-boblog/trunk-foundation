@@ -1,9 +1,5 @@
 package com.tumbleweed.platform.trunk.util.date;
 
-import com.mittop.platform.soupe.core.model.User;
-import com.mittop.product.bms.budget.core.model.BudgetProcessStatus;
-import com.mittop.product.bms.budget.core.model.param.BudgetPlanningParam;
-import com.mittop.product.bms.core.model.ItemGroupAllocate;
 import org.apache.commons.lang.StringUtils;
 
 import java.text.DecimalFormat;
@@ -217,42 +213,6 @@ public class PeriodUtil {
         return false;
     }
 
-    /**
-     * 生成BudgetParamData对象
-     *
-     * @param user
-     * @param processStatus 流程信息
-     * @return BudgetParamData对象
-     */
-    public static final BudgetPlanningParam getParamData(User user, BudgetProcessStatus processStatus) {
-        BudgetPlanningParam budgetBaseParam = new BudgetPlanningParam();
-        budgetBaseParam.setDomainId(processStatus.getDomainId());
-        budgetBaseParam.setBudgetType(processStatus.getBudgetType());
-        budgetBaseParam.setMonth(getMonth(processStatus.getPeriod()));
-        budgetBaseParam.setItemGroupId(processStatus.getItemGroupId());
-        budgetBaseParam.setOrganizationId(processStatus.getOrganizationId());
-        budgetBaseParam.setPeriod(processStatus.getPeriod());
-        budgetBaseParam.setUserId(user.getId());
-        budgetBaseParam.setDomainId(user.getDomainId());
-        return budgetBaseParam;
-    }
-
-    /**
-     * ItemGroupAllocate去重复(针对itemGroupId)
-     * TODO 这个最好在ItemGroupAllocate相关的Service或Manager中实现
-     *
-     * @param itemGroupAllocates
-     * @return
-     */
-    public static Set<ItemGroupAllocate> clearRepeat(Collection<ItemGroupAllocate> itemGroupAllocates) {
-        Map<Long, ItemGroupAllocate> map = new HashMap<Long, ItemGroupAllocate>();
-        for (ItemGroupAllocate itemGroupAllocate : itemGroupAllocates) {
-            map.put(itemGroupAllocate.getItemGroupId(), itemGroupAllocate);
-        }
-        Set<ItemGroupAllocate> itemGroupAllocateSet = new HashSet<ItemGroupAllocate>(map.values());
-        return itemGroupAllocateSet;
-    }
-
     private static List<String> getMonthCodeList() {
         List<String> months = new ArrayList<String>();
         months.add("01");
@@ -347,8 +307,6 @@ public class PeriodUtil {
 
     /**
      * 获取一个时间段但是剔除特殊日期
-     * @param string
-     * @param string2
      * @return
      */
     public static Object getDefectDateSlot(String sPeriod,String ePeriod,Integer month){

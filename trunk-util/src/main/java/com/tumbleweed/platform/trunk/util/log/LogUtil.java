@@ -1,13 +1,16 @@
 package com.tumbleweed.platform.trunk.util.log;
 
-import org.apache.commons.logging.Log;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
- * Created by Lenovo on 2015/5/14.
+ * Created by wjp on 2015/5/14.
  */
 public class LogUtil {
 
-    public static long writMessage(Log logger, Long lastTime, String message){
+    private static Logger log = LoggerFactory.getLogger(LogUtil.class);
+
+    public static long writMessage(Logger logger, Long lastTime, String message){
         long now = System.currentTimeMillis();
         if(lastTime == null){
             logger.info(message + " " + now);

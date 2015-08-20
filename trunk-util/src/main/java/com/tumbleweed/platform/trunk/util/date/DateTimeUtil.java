@@ -1,7 +1,5 @@
 package com.tumbleweed.platform.trunk.util.date;
 
-import org.springframework.util.StringUtils;
-
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -9,6 +7,7 @@ import java.util.*;
 import java.util.regex.Pattern;
 
 public class DateTimeUtil {
+
     public static final long SECOND = 1000L;
     public static final long MINUTE = 60 * SECOND;
     public static final long HOUR = 60 * MINUTE;
@@ -157,9 +156,6 @@ public class DateTimeUtil {
      * @return
      */
     public static Date parse(String v, String fm, Date def) {
-        if(StringUtils.isEmpty(v)){
-            return def;
-        }
         try {
             return new SimpleDateFormat(fm).parse(v);
         } catch (Exception e) {

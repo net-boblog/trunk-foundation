@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration status="error">
+	<Properties>
+		<Property name="log_home">/logs/</Property>
+	</Properties>
+	
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%-d{yyyy-MM-dd HH:mm:ss,SSS} [%p] %c{1}%x - %m%n"/>
+        </Console>
+        
+        <RollingRandomAccessFile name="cloudcom" fileName="${log_home}/cloudcom.log"
+                     filePattern="${log_home}/cloudcom.log.%-d{yyyy-MM-dd-HH}">
+            <PatternLayout pattern="%-d{yyyy-MM-dd HH:mm:ss,SSS} %x - %m%n"/>
+            <Policies>
+            	<TimeBasedTriggeringPolicy interval="1" modulate="true"/>
+            </Policies>
+        </RollingRandomAccessFile>
+        
+        <RollingRandomAccessFile name="clouderror" fileName="${log_home}/clouderror.log"
+                     filePattern="${log_home}/clouderror.log.%-d{yyyy-MM-dd}">
+            <ThresholdFilter level="error" onMatch="ACCEPT"/>
+            <PatternLayout pattern="%-d{yyyy-MM-dd HH:mm:ss,SSS} %x - %m%n"/>
+            <Policies>
+            	<TimeBasedTriggeringPolicy interval="24" modulate="true"/>
+            </Policies>
+        </RollingRandomAccessFile>
+        <!--
+        <RollingRandomAccessFile name="cloudalarm" fileName="${log_home}/cloudalarm.log"
+                     filePattern="${log_home}/cloudalarm.log.%-d{yyyy-MM-dd}">
+            <PatternLayout pattern="%-d{yyyy-MM-dd HH:mm:ss,SSS} %x - %m%n"/>
+            <Policies>
+            	<TimeBasedTriggeringPolicy interval="24" modulate="true"/>
+            </Policies>
+        </RollingRandomAccessFile>
+        <RollingRandomAccessFile name="cloudprev" fileName="${log_home}/cloudprev.log"
+                     filePattern="${log_home}/cloudprev.log.%-d{yyyy-MM-dd}">
+            <PatternLayout pattern="%-d{yyyy-MM-dd HH:mm:ss,SSS} %x - %m%n"/>
+            <Policies>
+            	<TimeBasedTriggeringPolicy interval="24" modulate="true"/>
+            </Policies>
+        </RollingRandomAccessFile>
+        -->
+    </Appenders>
+    
+    <Loggers>
+    	<Logger name="org.springframework.jdbc.core.JdbcTemplate" level="debug" additivity="false">
+            <AppenderRef ref="cloudcom"/>
+            <AppenderRef ref="console"/>
+        </Logger>
+        <!--<Logger name="org.ming.sample.alarm.impl.AlarmCenterImpl" level="info" additivity="false">
+            <AppenderRef ref="cloudalarm"/>
+        </Logger>
+        <Logger name="org.ming.sample.alarm.impl.PrevInterceptor" level="info" additivity="false">
+            <AppenderRef ref="cloudprev"/>
+        </Logger>
+        -->
+        <Root level="info">
+        	<AppenderRef ref="console"/>
+        	<AppenderRef ref="cloudcom"/>
+        	<AppenderRef ref="clouderror"/>
+        </Root>
+    </Loggers>
+</Configuration>
