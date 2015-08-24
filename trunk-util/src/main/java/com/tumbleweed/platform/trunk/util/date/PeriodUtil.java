@@ -7,7 +7,6 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
- * 一些杂七杂八的工具方法的集合
  * @date 2014年2月21日
  */
 public class PeriodUtil {
