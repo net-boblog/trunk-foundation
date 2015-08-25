@@ -58,5 +58,5 @@ target
 
 # Others #
 ##########
-./build
-./dist
+#build
+#dist

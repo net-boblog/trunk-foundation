@@ -13,8 +13,6 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>trunk-core</module>
-        <module>trunk-web</module>
         <module>trunk-base</module>
         <module>trunk-workbook</module>
         <module>trunk-util</module>
