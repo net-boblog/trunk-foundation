@@ -10,6 +10,7 @@
     </parent>
     <groupId>com.tumbleweed.platform.trunk</groupId>
     <artifactId>trunk-foundation</artifactId>
+    <name>Trunk Foundation</name>
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
