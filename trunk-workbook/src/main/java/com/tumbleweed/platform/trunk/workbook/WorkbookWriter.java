@@ -1,6 +1,6 @@
 package com.tumbleweed.platform.trunk.workbook;
 
-import com.mittop.platform.soupe.common.workbook.model.*;
+import com.tumbleweed.platform.trunk.workbook.model.*;
 import org.apache.commons.beanutils.PropertyUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

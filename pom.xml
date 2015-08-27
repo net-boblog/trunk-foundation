@@ -79,16 +79,4 @@
             </snapshots>
         </pluginRepository>
     </pluginRepositories>
-    <distributionManagement>
-        <repository>
-            <id>trunk-releases</id>
-            <name>Trunk Releases Repository</name>
-            <url>http://123.56.228.198:8081/nexus/content/repositories/trunk-releases</url>
-        </repository>
-        <snapshotRepository>
-            <id>trunk-snapshots</id>
-            <name>Trunk Snapshots Repository</name>
-            <url>http://123.56.228.198:8081/nexus/content/repositories/trunk-snapshots</url>
-        </snapshotRepository>
-    </distributionManagement>
 </project>

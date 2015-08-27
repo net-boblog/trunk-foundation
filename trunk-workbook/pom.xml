@@ -13,9 +13,9 @@
     <dependencies>
         <dependency>
             <groupId>com.tumbleweed.platform.trunk</groupId>
-            <artifactId>trunk-util</artifactId>
+            <artifactId>trunk-dependency-common</artifactId>
             <version>1.0-SNAPSHOT</version>
+            <type>pom</type>
         </dependency>
     </dependencies>
-
 </project>

@@ -14,38 +14,38 @@
     <dependencies>
         <dependency>
             <groupId>com.tumbleweed.platform.trunk</groupId>
-            <artifactId>trunk-util</artifactId>
+            <artifactId>trunk-workbook</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.tumbleweed.platform.trunk</groupId>
             <artifactId>trunk-spring</artifactId>
             <version>1.0-SNAPSHOT</version>
+            <type>pom</type>
         </dependency>
         <dependency>
             <groupId>com.tumbleweed.platform.trunk</groupId>
             <artifactId>trunk-spring-data</artifactId>
             <version>1.0-SNAPSHOT</version>
+            <type>pom</type>
         </dependency>
         <dependency>
             <groupId>com.tumbleweed.platform.trunk</groupId>
             <artifactId>trunk-spring-security</artifactId>
             <version>1.0-SNAPSHOT</version>
+            <type>pom</type>
         </dependency>
         <dependency>
             <groupId>com.tumbleweed.platform.trunk</groupId>
             <artifactId>trunk-spring-ws</artifactId>
             <version>1.0-SNAPSHOT</version>
+            <type>pom</type>
         </dependency>
         <dependency>
             <groupId>com.tumbleweed.platform.trunk</groupId>
             <artifactId>trunk-tiles</artifactId>
             <version>1.0-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>com.tumbleweed.platform.trunk</groupId>
-            <artifactId>trunk-axis</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <type>pom</type>
         </dependency>
     </dependencies>
 </project>
