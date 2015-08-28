@@ -1,12 +1,12 @@
 package com.tumbleweed.platform.trunk.util.json;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.codehaus.jackson.JsonEncoding;
 import org.codehaus.jackson.JsonGenerator;
 import org.codehaus.jackson.JsonNode;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.type.JavaType;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -16,7 +16,7 @@ import java.io.IOException;
  */
 public final class JsonUtil {
 
-    private static Log logger = LogFactory.getLog(JsonUtil.class);
+    private static Logger logger = LoggerFactory.getLogger(JsonUtil.class);
 
     private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
 
@@ -79,6 +79,7 @@ public final class JsonUtil {
             jsonGenerator.writeObject(bean);
 
             content = new String(outputStream.toByteArray(), "UTF-8");
+
         } catch (Exception ex) {
             logger.warn(ex.getMessage(), ex);
         }
