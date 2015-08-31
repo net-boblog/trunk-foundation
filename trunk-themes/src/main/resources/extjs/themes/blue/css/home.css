@@ -1,0 +1,187 @@
+@charset "utf-8";
+
+.soupe-home {
+
+}
+
+.soupe-home-todo {
+    margin-bottom:5px;
+}
+
+.soupe-home-doing {
+    margin-bottom:5px;
+}
+
+.soupe-home-unread {
+    margin-bottom:5px;
+}
+
+.soupe-home-done {
+    margin-bottom:5px;
+}
+
+.soupe-home-navigator {
+    padding:0px;
+    text-align:left;
+}
+
+.soupe-bookmark-link {
+    width:170px;
+    margin-left:2px;
+    padding-top:5px;
+    border:1px solid #FFF;
+}
+
+.soupe-bookmark-link ul {
+    padding:0px !important;
+    margin:0px !important;
+}
+
+.soupe-bookmark-link li {
+    padding:2px 0px 2px 20px;
+}
+
+.soupe-home-knowledge {
+    margin-top:10px;
+}
+
+#home-layout {
+    padding-right:186px; /* "left col" width */
+}
+
+#home-nav {
+    margin-right:-186px; /* "left col" width */
+    width:186px;
+    min-height: 200px;
+    float: right;
+    text-align: left;
+    margin-top:-27px;
+}
+
+#home-main {
+    width:100%;
+    min-height: 300px;
+    text-align: left;
+}
+
+/********待办事项和进行中事项*******/
+.grid_bz {
+	padding:10px 0;
+}
+.grid_time {
+	position:relative;
+	padding:10px 0;
+	margin-left:20px;
+}
+.grid_date {
+	float:left;
+	margin-top:3px;
+	margin-left:8px;
+	color:#333
+}
+.grid_date input {
+	font-family:tahoma;
+	color:#333
+}
+.grid_applyStyle {
+	margin-left:20px;
+	float:left;
+	margin-top:3px;
+}
+.grid_keywords {
+	margin-left:20px;
+	float:left;
+	margin-top:3px;
+}
+.grid_action {
+	margin:10px 0;
+}
+.grid_orderBy {
+	float:right;
+	margin-right:15px;
+}
+.grid_title {
+	background: #f4f4f4 url(../images/grid/grid_bg.png) no-repeat right top;
+	border-top: solid 1px #d5d5d5;
+	border-bottom: 1px solid #d5d5d5;
+	font-family: SimHei;
+	font-size: 16px;
+	padding: 5px;
+	color: #283993;
+	font-weight: bolder;
+}
+.grid_table_col {
+	background-color:#f8f8f8;
+	padding:5px 10px 5px 10px;
+	border:solid 1px #eaeaea;
+	margin-top:10px;
+}
+.grid_table_col table {
+	width:100%;
+	background-color:#fff;
+}
+.grid_table_col td {
+	border-bottom:1px dotted #E6E6E6;
+	height:24px;
+	padding-left:5px;
+}
+.grid_row_current {
+	background-color:#ffffff;
+}
+.grid_row_detailProcess {
+	padding:10px 0;
+}
+.grid_row_processGuide {
+	margin-bottom:5px;
+}
+.grid_Processflow_first {
+	float:left;
+	text-align:center;
+	width:141px;
+}
+.grid_Processflow_pass, .grid_Processflow_tobe {
+	float:left;
+	text-align:center;
+	width:155px;
+	margin-left:-15px;
+}
+.grid_Processflow_first p, .grid_Processflow_pass p {
+	font-family:SimHei;
+	font-size:14px;
+	color:#fff;
+	padding-top:10px;
+}
+.grid_Processflow_tobe p {
+	font-family:SimHei;
+	font-size:14px;
+	color:#555;
+	padding-top:10px;
+}
+.grid_process_first {
+	background:url(../images/grid/process.gif) no-repeat 0 0;
+	height:37px;
+}
+.grid_process_pass {
+	background:url(../images/grid/process.gif) no-repeat 0 -36px;
+	height:37px;
+}
+.grid_process_tobe {
+	background:url(../images/grid/process.gif) no-repeat 0 -76px;
+	height:37px;
+}
+.grid_row_ProcessExpress {
+	text-align:center;
+	font-family:SimHei;
+	font-size:14px;
+}
+.grid_process_time {
+	text-align:center;
+	padding-bottom:10px;
+}
+.grid_pagenation {
+	text-align:right;
+	margin-top:20px;
+}
+.nav_current {
+	color:#283993;
+}

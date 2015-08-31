@@ -1,0 +1,46 @@
+@charset "utf-8";
+
+.soupe-header {
+
+}
+
+.soupe-header-content {
+    border-bottom: 6px solid #283993;
+}
+
+.company_title1 {
+	font-size: 22px;
+	font-family:"黑体";
+	color:#5f5e5e;
+	font-weight:bold;
+}
+
+.header_menu {
+	float:right;
+	margin-top:10px;
+	width:300px;
+}
+
+.header_menu ul {
+    margin:0px !important;
+    padding:0px !important;
+}
+
+.header_menu li {
+	float:right;
+	display:inline;
+	padding:0px !important;
+	margin:0px !important;
+}
+
+.header_menu li span {
+    display: block;
+    padding:0px 5px;
+    margin:0px !important;
+}
+
+.header_menu li a {
+    display: block;
+    padding:0px 5px;
+    margin:0px !important;
+}

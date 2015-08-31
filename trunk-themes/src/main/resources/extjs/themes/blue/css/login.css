@@ -1,0 +1,55 @@
+@charset "utf-8";
+
+body {
+    background:#FFF !important;
+}
+
+.soupe-login-header {
+    width: 960px;
+    border: 0px !important;
+}
+
+.soupe-login-center {
+    margin-top:20px;
+    padding:0px !important;
+    width:960px;
+    height:582px;
+    background-image: url("../images/bg-login.jpg");
+    background-repeat: no-repeat;
+    background-position: top center;
+    font-size: 10pt;
+    text-align:left;
+}
+
+.soupe-login-form {
+    float:right;
+    width:328px;
+    margin-top:175px;
+}
+
+.soupe-login-form ul {
+    padding:0px;
+    margin:0px;
+}
+
+.soupe-login-form li {
+    border:0px;
+    padding:0px;
+    margin:0px;
+}
+
+.soupe-login-form-rowspace {
+    margin-top:30px !important;
+}
+
+.soupe-login-form-textinput {
+    width:188px;
+    height:26px;
+    padding-top:2px;
+    vertical-align: bottom;
+    margin: 0px;
+    border: 0px;
+    background: transparent;
+    font-family: "Lucida Grande,Verdana,Arial";
+    font-size: 14pt;
+}

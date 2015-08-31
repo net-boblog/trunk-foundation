@@ -1,0 +1,526 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+    text-align: left;
+    font-family: Verdana, "宋体" !important;
+    font-size: 12px !important;
+}
+
+a {
+    color: #0076c9;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #0076c9;
+}
+
+a:hover {
+    color: #333;
+    /*text-decoration: underline;*/
+}
+
+.clear {
+    clear: both;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.border_bt {
+    border-bottom: none
+}
+
+.margin_bt15 {
+    margin-bottom: 15px;
+}
+
+.padding_top20 {
+    padding-top: 20px;
+}
+
+.margin_lt20 {
+    margin-left: 20px;
+}
+
+.margin_lt20 a {
+    color: #283993;
+    text-decoration: underline;
+    margin-left: 5px;
+}
+
+.margin_lt20 a:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+.textarea_bg {
+    width: 549px;
+    height: 46px;
+    border: none;
+    overflow: hidden;
+    padding: 10px;
+    color: #555;
+}
+
+/*
+input, select, textarea {
+	border: 1px solid #ccc;
+	padding:1px
+}
+*/
+/*************buttons*****************/
+.btn:hover {
+    background-image: url('../images/btn/hover_buttons.gif');
+}
+
+.btn_search {
+    background-position: 0 0;
+    width: 42px;
+    height: 28px;
+    margin-left: 5px;
+    background-image: url(../images/btn/buttons.gif);
+    border: none;
+    float: left
+}
+
+.btn_del {
+    background-position: -57px -29px;
+    width: 54px;
+    height: 28px;
+    margin-left: 5px;
+    background-image: url(../images/btn/buttons.gif);
+    border: none;
+    float: left
+}
+
+.btn_del:hover {
+    background-position: -57px -29px;
+    width: 54px;
+    height: 28px;
+    margin-left: 5px;
+    background-image: url(../images/btn/hover_buttons.gif);
+    border: none;
+    float: left
+}
+
+.btn_contactSearch {
+    background-image: url("../images/btn/buttons.gif");
+    background-position: -59px 0;
+    border: medium none;
+    float: left;
+    height: 20px;
+    margin-left: 2px;
+    width: 39px;
+}
+
+.btn_fabu {
+    background-image: url("../images/btn/buttons.gif");
+    background-position: 0 -29px;
+    border: medium none;
+    float: left;
+    height: 28px;
+    margin-left: 2px;
+    width: 54px;
+}
+
+.btn_publish {
+    background-image: url(../images/btn/buttons.gif);
+    background-position: 0 -58px;
+    width: 55px;
+    height: 26px;
+    font-family: Simsun, SimHei;
+    font-size: 14px;
+    color: #000;
+    padding-bottom: 3px;
+}
+
+.btn_delete {
+    background-image: url(../images/btn/buttons.gif);
+    background-position: 0 -30px;
+    width: 55px;
+    height: 26px;
+    font-family: SimHei, Microsoft YaHei;
+    font-size: 14px;
+    color: #000;
+    padding-bottom: 3px;
+    border: 2px solid red
+}
+
+.save_bt {
+    width: 105px;
+    height: 30px;
+    background: url('../images/btn/normal_save&cancel.png') no-repeat;
+    border: 0 none;
+    font: bold 14px/29 x "Simsun";
+    color: #333;
+    margin-right: 12px;
+}
+
+.cancel_bt {
+    width: 105px;
+    height: 30px;
+    background: url('../images/btn/normal_save&cancel.png') no-repeat;
+    border: 0 none;
+    font: bold 14px/29 x "Simsun";
+    color: #333;
+    margin-right: 12px;
+}
+
+.save_bt:hover {
+    background: url('../images/btn/hover_save&cancel.png') no-repeat
+}
+
+.cancel_bt:hover {
+    background: url('../images/btn/hover_save&cancel.png') no-repeat
+}
+
+/**************Length of Input label***************/
+.input_short {
+    width: 160px;
+    height: 22px;
+    padding: 5px;
+    height: 14px;
+    float: left;
+    color: #A0A0A0
+
+}
+
+.input_shorter {
+    width: 100px;
+    height: 15px;
+    float: left
+}
+
+/**********************CSS圆角框 *****************************************/
+
+/*通用样式--容器宽度值*/
+.left_nav {
+    width: 175px;
+    margin-top: 10px;
+}
+
+.tip_pop {
+    width: 506px;
+    padding: 15px;
+}
+
+.nav_content {
+    border-right: 1px solid;
+    border-left: 1px solid;
+    overflow: hidden;
+}
+
+.nav_link {
+    margin: 15px 0;
+}
+
+.nav_link li, .nav_link_bottom li, .nav_link_top li {
+    width: 152px;
+    border-bottom: dotted 1px #e8e8e8;
+    text-align: left;
+    padding: 0 0 35px 18px;
+    *padding: 0 0 5px 20px;
+    margin-left: 2px;
+}
+
+.nav_link_bottom li.border_bottom_none {
+    border: none
+}
+
+.nav_link li a, .nav_link_bottom li a, .nav_link_top li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: normal;
+    margin-left: 10px;
+    padding-top: 10px;
+    float: left;
+    width: 110px;
+}
+
+.nav_link li a:hover, .nav_link_bottom li a:hover, .nav_link_top li a:hover {
+    color: #283993;
+    text-decoration: underline;
+}
+
+.nav_contact li {
+    padding: 5px 5px 0 5px;
+    line-height: 18px;
+    border-bottom: dotted 1px #e6e6e6;
+    margin: 0 5px;
+}
+
+.nav_warning li {
+    padding: 10px 5px 0 10px;
+    line-height: 18px;
+    border-bottom: dotted 1px #e6e6e6;
+    margin: 0 5px;
+    list-style: inside disc;
+}
+
+.nav_warning li a {
+    text-decoration: none;
+    color: #333;
+}
+
+.nav_warning li a:hover {
+    color: #283993;;
+    text-decoration: underline;
+}
+
+.nav_title {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+/*上圆角框通用设置样式，如果要运用多个不同颜色，以下6句不用重新变化--------------------------------*/
+.b1, .b2, .b3, .b4, .b5, .b6 {
+    height: 1px;
+    font-size: 1px;
+    overflow: hidden;
+    display: block;
+}
+
+.b1, .b6 {
+    margin: 0 1px;
+}
+
+.b2, .b5 {
+    margin: 0;
+    border-right: 2px solid;
+    border-left: 2px solid;
+}
+
+.b3, .b4 {
+    margin: 0;
+    border-right: 1px solid;
+    border-left: 1px solid;
+}
+
+/*颜色方案----------------------------------------*/
+/*下面第一、二句决定边框颜色，第三句决定背景颜色*/
+/*边框色*/
+.nav_color .b2, .nav_color .b3, .nav_color .b4, .nav_color .b5, .nav_color .nav_content {
+    border-color: #D7D7D7;
+}
+
+.nav_color .b1, .nav_color .b6 {
+    background: #d7d7d7;
+}
+
+/*背景色*/
+.nav_color .b2, .nav_color .b3, .nav_color .b4, .nav_color .b5, .nav_color .nav_content {
+    background: #FFF;
+}
+
+/**********左边导航Icon样式以及替换 *****************************************/
+.nav_link span, .nav_link_bottom span, .nav_link_top span {
+    float: left;
+    height: 31px;
+    width: 31px;
+}
+
+.nav_enterprise_contact {
+    background-position: 0 0;
+}
+
+.nav_email {
+    background-position: -31px 0;
+}
+
+.nav_schedue {
+    background-position: -62px 0;
+}
+
+.nav_invitation {
+    background-position: -93px 0;
+}
+
+.nav_BZtrip {
+    background-position: -124px 0;
+}
+
+.nav_nameCard {
+    background-position: -155px 0;
+}
+
+.nav_receipt {
+    background-position: -186px 0;
+}
+
+.nav_specialBZ {
+    background-position: -217px 0;
+}
+
+.nav_fileStore {
+    background-position: -248px 0;
+}
+
+.nav_personalBlog {
+    background-position: -277px 0;
+}
+
+.nav_RSSorder {
+    background-position: -308px 0;
+}
+
+.nav_wiki {
+    background-position: -339px 0;
+}
+
+.nav_draftbox {
+    background-position: -366px 0;
+}
+
+.nav_toBeDone {
+    background-position: -395px 0;
+}
+
+.nav_ing {
+    background-position: -424px 0;
+}
+
+.nav_done {
+    background-position: -453px 0;
+}
+
+/**********栏目Panel和功能Panel样式 *****************************************/
+/*需要时更改适合的宽度即可*/
+.panel_contentMid {
+    width: 280px;
+}
+
+.panel_contentLon {
+    width: 100%;
+    float: left;
+}
+
+.panel_event {
+    overflow: auto;
+    height: 180px;
+}
+
+.panel_news {
+    margin-top: 10px;
+}
+
+.panel_news_top10 {
+    padding-top: 10px;
+}
+
+.panel_event_title {
+    background: url(../images/panel/title_bg_long.png) no-repeat 0 0;
+    height: 25px;
+    line-height: 25px;
+    font-family: SimHei;
+    font-size: 16px;
+    color: #283993;
+    font-weight: bold;
+    padding-left: 8px;
+}
+
+.panel_event li {
+    border-bottom: dotted 1px #e8e8e8;
+    background: url(../images/panel/icons.gif) no-repeat 0 -203px;
+    padding-left: 10px;
+    height: 20px;
+    margin-top: 10px;
+}
+
+.panel_event li a {
+    text-decoration: none;
+    color: #333;
+    float: left;
+}
+
+.panel_event li a:hover {
+    color: #283993;
+    text-decoration: underline;
+}
+
+.panel_event p {
+    font-family: "宋体", Tahoma;
+    font-size: 12px;
+}
+
+.red_tip {
+    color: #ff0000;
+}
+
+.orange_tip {
+    color: #f19114;
+}
+
+.desc {
+    display: block;
+    margin-top: 3px;
+    color: #888888;
+    font-size: 12px;
+    width: 560px;
+    padding: 5px 0 0 3px
+}
+
+.overlen {
+    color: red
+}
+
+li {
+    list-style-type: none;
+}
+
+.soupe-menu-level1 {
+
+}
+
+.soupe-menu-level2 {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.soupe-menu-level3 {
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.soupe-panel-more {
+
+}
+
+.soupe-panel-more a {
+    color: #FFF;
+    display: block;
+    width: 30px;
+}
+
+
+.lightyellow {
+    background-color: #FFFEC9;
+}
+
+.brown {
+    background-color: #B2101A;
+}
+
+.red {
+    background-color: #FF303D;
+}
+
+.lightblue {
+    background-color: #128ACC;
+}
+
+.blue {
+    background-color: #4d90fe;
+}
+
+.gray {
+    background-color: #F3F3F3;
+}

@@ -1,0 +1,709 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.company_title1 {
+	font-size: 22px;
+	font-family:"黑体";
+	color:#5f5e5e;
+	font-weight:bold;
+}
+.header_menu {
+	float:right;
+	margin:16px 16px 0 0
+}
+.header_menu li {
+	float:left;
+	display:inline;
+	margin-left:15px;
+}
+/*************main navigation*****************/
+.mian_nav_col {
+	padding-left:180px;
+}
+.mian_nav_col li {
+	float: left;
+	/*display: inline;                                  减去css*/
+	font-weight: bold;
+}
+.mian_nav_col li a {
+	display:block;/*新增css*/
+	font-family:"simhei";
+	font-size:16px;
+	padding:6px 12px 6px 12px;
+	text-decoration:none;
+	color:#283993;
+}
+.mian_nav_col li a:hover {
+	background-color:#eff0f7;
+	text-decoration:none;
+	color:#283993;
+}
+.mian_nav_col li a:selected {
+color:#fff;
+background-color:#283993;
+}
+.mian_nav_col li a.current {
+	background-color:#283993;
+	color:#fff;
+}
+.mian_nav_col li a.current:hover{
+	background-color:#283993;
+	color:#fff;
+}
+/*************Search*****************/
+.search {
+	height: 35px;
+	float:left;
+}
+.search_head {
+	height: 35px;
+	float:right;
+	margin-right: 8px;
+}
+.search_col {
+	height:25px;
+}
+
+/************panel content and icons******************/
+.left_content {
+	width:180px;
+	float:left;
+}
+.entrance {
+	font-family:SimHei;
+	font-size:16px;
+}
+.panel_icon {
+	background-image:url(../images/panel/icons.gif);
+}
+.panel_title {
+	background: url(../images/panel/title_bg.png) repeat-x;
+	height: 26px;
+	font-size: 14px;
+	font-family: SimHei;
+	padding: 5px 5px 0 10px;
+	position: relative;
+	font-weight: bold;
+	color: #333;
+}
+.panel_title_right{
+	background: url(../images/bg/right_title_bg.png) left top no-repeat;
+	height:24px;
+	font-size: 14px;
+	font-family: SimHei;
+	padding:10px 5px 0 10px;
+	position:relative;
+	font-weight:bold;
+	color: #333;
+	width:150px
+}
+.panel_title_left{
+	background:url(../images/bg/left_bg.png) left top no-repeat;
+	height:26px;
+	font-size: 14px;
+	font-family: SimHei;
+	padding:8px 5px 0 10px;
+	position:relative;
+	font-weight:bold;
+	color: #333;
+	width:160px
+}
+.panel_title_icon {
+	background-position:0 0;
+	width:22px;
+	height:22px;
+	position:absolute;
+	right:5px;
+	top:8px;
+}
+.panel_cellphone_icon {
+	background-position:0 -134px;
+	width:23px;
+	height:25px;
+	float:left
+}
+.panel_telephone_icon {
+	background-position:0 -157px;
+	width:24px;
+	height:24px;
+	float:left
+}
+.panel_email_icon {
+	background-position:0 -181px;
+	width:24px;
+	height:25px;
+	float:left
+}
+.panel_calender_icon {
+	background-position:0 -52px;
+	width:22px;
+	height:24px;
+	float:left;
+	margin-left:5px;
+}
+.panel_edit_icon {
+	background-position:0 -105px;
+	width:22px;
+	height:24px;
+	float:left;
+	cursor:pointer
+}
+.panel_delete_icon {
+	background-position:0 -77px;
+	width:22px;
+	height:24px;
+	float:left;
+	margin-left:15px;
+	cursor:pointer
+}
+.panel_execute_icon {
+	background-position:0 -225px;
+	width:22px;
+	height:24px;
+	float:left;
+	margin-left:15px;
+	cursor:pointer
+}
+.right_content {
+	width:750px;
+	float:right;
+	padding-top:10px;
+}
+.right_content_pagePath {
+	font-family:"宋体";
+	font-size:12px;
+	margin-bottom:23px;
+}
+.right_content_pagePath a {
+	color:#283993;
+	text-decoration:underline;
+}
+.right_content_pagePath a:hover {
+	color:#283993;
+	text-decoration:underline;
+}
+.right_content_mainMid {
+	width:575px;
+	float:left;
+}
+.right_content_subRight {
+	width:165px;
+	float:right;
+}
+/************待办事项******************/
+.event_pad {
+	margin-bottom:10px;
+}
+.event_item {
+	width:150px;
+	float:left;
+}
+.event_star {
+	background-position:0 -25px;
+	height:20px;
+	width:22px;
+	float:left;
+	margin-left:5px;
+}
+/************新闻******************/
+.news_left {
+	width:280px;
+	float:left;
+	border-right:1px solid #e6e6e6;
+	margin-top:6px;
+	padding-right:5px;
+}
+.news_right {
+	width:280px;
+	float:left;
+	margin-top:6px;
+	padding-left:8px;
+}
+.news_title {
+	font-family: SimHei;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+.news_content_tail {
+	padding-bottom:10px;
+}
+.news_content_tail dt {
+	float:left;
+	margin-right:0;
+}
+.news_content_img {
+	width:115px;
+}
+.news_content_preview {
+	margin-left:5px;
+	width:150px;
+}
+.news_content_title {
+	margin-bottom: 5px;
+	margin-left: auto;
+}
+.news_content {
+	line-height:18px;
+}
+.news_content_preview a {
+	font-family:SimSun;
+	font-size:12px;
+	font-weight:800;
+	color:#283993;
+	text-decoration:none;
+}
+.news_content_preview a:hover {
+	text-decoration:underline;
+	color:#283993;
+}
+.news_content_checkAll {
+	text-align:right;
+	padding:5px 10px 0 0;
+}
+.news_content_checkAll a {
+	color:#555555;
+	text-decoration:none;
+}
+.news_content_checkAll a:hover {
+	color:#283993;
+	text-decoration:underline;
+}
+.news_content_checkAll a:visited {
+	color:#555555;
+}
+/**********通讯簿********/
+.contacts contact {;
+	margin:0;
+	padding:0
+}
+.contact_name a {
+	text-decoration:none;
+	color:#555555;
+	margin-bottom:5px;
+}
+.contact_name a:hover {
+	text-decoration:underline;
+	color:#283993;
+	margin-bottom:5px;
+}
+.contact_mobile {
+	margin-left:20px;
+}
+.contact_checkMore {
+	text-align:right;
+	padding:8px 15px;
+	clear:both
+}
+.contact_checkMore a {
+	color:#555555;
+	text-decoration:none;
+}
+.contact_checkMore a:hover {
+	color:#283993;
+	text-decoration:underline;
+}
+.contact_checkMore a:visited {
+	color:#555555;
+}
+.contact_item {
+	padding:0 0 7px 0;
+}
+/********联系人动态*******/
+.post_column {
+	margin:10px 0 15px 0
+}
+.post_box {
+	margin-left:5px;
+}
+.post_actions {
+	margin:5px 0 0 10px
+}
+.post_info {
+	float:left;
+	width:90%;
+*width:88%;
+}
+.post_send_btn {
+	float:right;
+	display:inline;
+	width:10%
+}
+.post_view_column {
+	margin-top:20px;
+	position:relative;
+}
+.post_tabs {
+	position:absolute;
+	top:-39px;
+	left:20px;
+}
+.post_tabItems {
+	background:url(../../../New%20folder/HTML/images/panel/tab_bg.png) repeat-x;
+	padding-left:15px;
+	padding-right:15px;
+	padding-bottom:5px;
+	margin-top:6px;
+	border-right:solid 1px #e7e7e7;
+}
+
+.tab_current {
+	float:left;
+	height:30px;
+	width:107px;
+	text-align:center;
+	background:url(../images/panel/tab_current.png) no-repeat;
+	vertical-align:middle;
+	color:#283993;
+	font-size:14px;
+}
+.post_streams {
+	margin-top:45px;
+}
+.post_stream_list {
+	margin:0 10px;
+	border-bottom:dotted 1px #e8e8e8;
+	padding:10px 0;
+	display:block
+}
+.post_stream_img {
+	width: 72px;
+	height: 61px;
+	float: left;
+	border: solid 1px #CCC;
+}
+.post_stream_content {
+	float:right;
+	width:470px;
+}
+.post_stream_pubDetail {
+	height:50px;
+	overflow:hidden;
+}
+.post_stream_pubDetail a {
+	color:#333;
+	text-decoration:underline;
+}
+.post_stream_pubDetail a:hover {
+	color:#283993;
+	text-decoration:none;
+}
+.post_stream_response {
+	margin-left:310px;
+}
+.post_stream_response a {
+	color:#283993;
+	text-decoration:underline;
+	margin-left: 5px;
+}
+.post_stream_response a:hover {
+	color:#333;
+	text-decoration:none;
+}
+/********天气*******/
+.weatherpannel {
+	border-left:1px solid #D7D7D7;
+	border-right:1px solid #D7D7D7;
+	overflow:hidden;
+	padding:0 0 12px 0
+}
+.todayweather {
+	height:80px;
+}
+.todayweather img {
+	float:left;
+	margin-top:10px;
+}
+.todayweather ul {
+	float:right;
+	margin-right:20px;
+	margin-top:10px;
+}
+.todayweather ul li h3 {
+	font:bold 16px/26px "Simsun";
+}
+.weatherinfor {
+}
+.weatherinfor p {
+	font: normal 12px/22px "Simsun";
+	float: left;
+	padding-left: 15px;
+}
+.weatherpannel table {
+	margin:0 auto;
+	text-align:center;
+}
+.img_weather {
+	margin-left:3px;
+	margin-right:0px;
+}
+.img_weather1 {
+	margin-left:2px;
+	margin-right:2px;
+}
+.img_weather2 {
+	margin-left:2px;
+	margin-right:4px;
+}
+/********待办事项和进行中事项*******/
+.grid_bz {
+	padding:10px 0;
+}
+.grid_time {
+	position:relative;
+	padding:10px 0;
+	margin-left:20px;
+}
+.grid_date {
+	float:left;
+	margin-top:3px;
+	margin-left:8px;
+	color:#333
+}
+.grid_date input {
+	font-family:tahoma;
+	color:#333
+}
+.grid_applyStyle {
+	margin-left:20px;
+	float:left;
+	margin-top:3px;
+}
+.grid_keywords {
+	margin-left:20px;
+	float:left;
+	margin-top:3px;
+}
+.grid_action {
+	margin:10px 0;
+}
+.grid_orderBy {
+	float:right;
+	margin-right:15px;
+}
+.grid_title {
+	background: #f4f4f4 url(../images/grid/grid_bg.png) no-repeat right top;
+	border-top: solid 1px #d5d5d5;
+	border-bottom: 1px solid #d5d5d5;
+	font-family: SimHei;
+	font-size: 16px;
+	padding: 5px;
+	color: #283993;
+	font-weight: bolder;
+}
+.grid_table_col {
+	background-color:#f8f8f8;
+	padding:5px 10px 5px 10px;
+	border:solid 1px #eaeaea;
+	margin-top:10px;
+}
+.grid_table_col table {
+	width:100%;
+	background-color:#fff;
+}
+.grid_table_col td {
+	border-bottom:1px dotted #E6E6E6;
+	height:24px;
+	padding-left:5px;
+}
+.grid_row_current {
+	background-color:#ffffff;
+}
+.grid_row_detailProcess {
+	padding:10px 0;
+}
+.grid_row_processGuide {
+	margin-bottom:5px;
+}
+.grid_Processflow_first {
+	float:left;
+	text-align:center;
+	width:141px;
+}
+.grid_Processflow_pass, .grid_Processflow_tobe {
+	float:left;
+	text-align:center;
+	width:155px;
+	margin-left:-15px;
+}
+.grid_Processflow_first p, .grid_Processflow_pass p {
+	font-family:SimHei;
+	font-size:14px;
+	color:#fff;
+	padding-top:10px;
+}
+.grid_Processflow_tobe p {
+	font-family:SimHei;
+	font-size:14px;
+	color:#555;
+	padding-top:10px;
+}
+.grid_process_first {
+	background:url(../images/grid/process.gif) no-repeat 0 0;
+	height:37px;
+}
+.grid_process_pass {
+	background:url(../images/grid/process.gif) no-repeat 0 -36px;
+	height:37px;
+}
+.grid_process_tobe {
+	background:url(../images/grid/process.gif) no-repeat 0 -76px;
+	height:37px;
+}
+.grid_row_ProcessExpress {
+	text-align:center;
+	font-family:SimHei;
+	font-size:14px;
+}
+.grid_process_time {
+	text-align:center;
+	padding-bottom:10px;
+}
+.grid_pagenation {
+	text-align:right;
+	margin-top:20px;
+}
+.nav_current {
+	color:#283993;
+}
+/********填写表单*******/
+.input {
+	width:280px;
+	height:22px;
+	line-height:25px;
+	font-size:12px;
+	color:#333333;
+}
+.input_table {
+	width:710px;
+	border:1px solid #eeeeee;
+	padding:0 20px;
+	text-align:center;
+	height:1390px
+}
+.input_table h3 {
+	font:bold 14px/30px "Simsun";
+	text-align:center;
+	padding:8px 0 0 0;
+}
+.input_table h4 {
+	font:normal 14px/30px "Simsun";
+	padding:5px 0;
+	border-bottom:dotted 1px #e8e8e8;
+	margin-bottom:8px;
+	text-align:left;
+	font-weight: bold;
+}
+.inputlist {
+}
+.inputlist-tr {
+}
+.inputlist-left {
+	text-align:right;
+	width:120px;
+	padding-left: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+	font-size:12px
+}
+.inputlist-right {
+	text-align:left;
+	padding-left: 5px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+#msg {
+	width:453px;
+	height:115px;
+}
+.inputlist-left1 {
+	text-align:right;
+	width:300px;
+	padding-left: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+}
+.inputlist-center1 {
+	width:300px;
+	padding-left: 5px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+}
+.inputlist-right1 {
+	text-align:left;
+	padding-left: 5px;
+	padding-top:10px;
+	padding-bottom:10px;
+	padding-right: 10px;
+}
+.buttonlist {
+	text-align:center
+}
+.dropdownlist {
+	width:280px;
+	height:22px;
+	line-height:25px;
+	font-size:12px;
+	color:#999999;
+}
+/********应用列表入口*******/
+#submenuframe {
+	display:none;
+	position:absolute;
+	width:100%;
+	float:left;
+}
+.submenu {
+	position:relative;
+	left:186px;
+	top:142px;
+	width:264px;
+	height:246px;
+	background-image:url(../images/panel/applist.png);
+}
+.submenulist {
+	padding-top: 20px;
+	padding-right: 15px;
+	padding-left: 5px;
+}
+.submenulist h3 {
+	margin-left:10px;
+	border-bottom:dotted 1px #e8e8e8;
+	padding-bottom:5px;
+}
+.submenulist h3 a {
+	font-size:15px;
+	font-weight:bold;
+	text-decoration:none;
+	color:#333
+}
+.submenulist h3 a:hover {
+	color:#283993;
+	text-decoration:underline;
+}
+.submenulist h3 a:visit {
+color:#333;
+}
+.submenulist p {
+	text-align:left;
+	margin-left:10px;
+	margin-top:10px;
+}
+.submenulist p a {
+	text-decoration:none;
+	font-weight:normal;
+	padding-left:5px;
+	padding-right:10px;
+	padding-top:10px;
+	font-size:13px;
+}
+.submenulist p a:hover {
+	color:#283993;
+	text-decoration:underline;
+}
+.submenulist p a:visit {
+color:#333;
+}

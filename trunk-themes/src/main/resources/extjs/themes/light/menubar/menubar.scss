@@ -1,0 +1,45 @@
+@mixin light-menubar($primaryStyleName : v-menubar) {
+
+.#{$primaryStyleName} {
+	color: #d5d5d5;
+	font-size: 14px;
+	font-weight: bolder;
+	/*border-left: 1px solid #c6cbcc;*/
+}
+.#{$primaryStyleName} .#{$primaryStyleName}-menuitem {
+	padding: 1px 10px;
+	/*border: 1px solid #c6cbcc;
+	border-left: none;
+	height: 25px;
+	line-height: 25x;*/
+    cursor: pointer;
+}
+.#{$primaryStyleName}-menuitem-selected {
+	color: #fff;
+	/*background: #5daee8;*/
+}
+.#{$primaryStyleName}-submenu {
+	/*background: #e9eced url(../tabsheet/img/tab-bg.png);*/
+	/*font-family: "Trebuchet MS", geneva, helvetica, arial, tahoma, verdana, sans-serif;*/
+	color: #464f52;
+	font-size: 14px;
+	line-height: 14px;
+	border-right: 1px solid #c6cbcc;
+	border-bottom: 1px solid #c6cbcc;
+	border-top: 1px solid #d0d4d5;
+	border-left: 1px solid #d0d4d5;
+}
+.#{$primaryStyleName}-submenu .#{$primaryStyleName}-menuitem {
+	padding-top: 2px;
+	padding-bottom: 2px;
+	line-height: 25px;
+	padding-left: 10px;
+	cursor: pointer;
+}
+.#{$primaryStyleName}-submenu .#{$primaryStyleName}-menuitem-caption .v-icon { 
+	vertical-align: middle;
+}
+.#{$primaryStyleName}-submenu .#{$primaryStyleName}-submenu-indicator {
+	font-size: 14px;
+}
+}

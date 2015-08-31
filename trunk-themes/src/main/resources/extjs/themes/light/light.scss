@@ -1,0 +1,71 @@
+@import "../base/base.scss";
+
+@import "absolutelayout/absolutelayout";
+@import "accordion/accordion";
+@import "button/button";
+@import "caption/caption";
+@import "colorpicker/colorpicker";
+@import "common/common";
+@import "datefield/datefield";
+@import "inlinedatefield/inlinedatefield";
+@import "formlayout/formlayout";
+@import "gridlayout/gridlayout";
+@import "label/label";
+@import "link/link";
+@import "menubar/menubar";
+@import "notification/notification";
+@import "orderedlayout/orderedlayout";
+@import "panel/panel";
+@import "popupview/popupview";
+@import "progressindicator/progressindicator";
+@import "select/select";
+@import "shadow/shadow";
+@import "slider/slider";
+@import "splitpanel/splitpanel";
+@import "table/table";
+@import "tabsheet/tabsheet";
+@import "textfield/textfield";
+@import "tree/tree";
+@import "window/window";
+
+.v-generated-body {
+	background: #e9eced;
+}
+
+$font-size: 13px;
+$line-height: 18px;
+
+@mixin light {
+	// TODO move?
+	@include base;
+	// TODO each
+	@include light-absolutelayout;
+	@include light-accordion;
+	@include light-button;
+	@include light-caption;
+	@include light-colorpicker;
+	
+	@include light-common;
+	
+	@include light-datefield;
+	@include light-inline-datefield;
+	@include light-formlayout;
+	@include light-gridlayout;
+	@include light-label;
+	@include light-link;
+	@include light-menubar;
+	@include light-notification;
+	@include light-orderedlayout;
+	@include light-panel;
+	@include light-popupview;
+	@include light-progressindicator;
+	@include light-select;
+	@include light-shadow;
+	@include light-slider;
+	@include light-splitpanel;
+	@include light-table;
+	@include light-tabsheet;
+	@include light-textfield;
+	@include light-tree;
+	@include light-window;
+}

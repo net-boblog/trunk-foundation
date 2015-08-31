@@ -1,0 +1,71 @@
+@import "../base/base.scss";
+
+@import "absolutelayout/absolutelayout";
+@import "accordion/accordion";
+@import "button/button";
+@import "caption/caption";
+@import "colorpicker/colorpicker";
+@import "common/common";
+@import "datefield/datefield";
+@import "inlinedatefield/inlinedatefield";
+@import "formlayout/formlayout";
+@import "gridlayout/gridlayout";
+@import "label/label";
+@import "link/link";
+@import "menubar/menubar";
+@import "notification/notification";
+@import "orderedlayout/orderedlayout";
+@import "panel/panel";
+@import "popupview/popupview";
+@import "progressindicator/progressindicator";
+@import "select/select";
+@import "shadow/shadow";
+@import "slider/slider";
+@import "splitpanel/splitpanel";
+@import "table/table";
+@import "tabsheet/tabsheet";
+@import "textfield/textfield";
+@import "tree/tree";
+@import "window/window";
+
+.v-generated-body {
+	/*background: #e9eced;*/
+}
+
+$font-size: 13px;
+$line-height: 18px;
+
+@mixin blue {
+	// TODO move?
+	@include base;
+	// TODO each
+	@include blue-absolutelayout;
+	@include blue-accordion;
+	@include blue-button;
+	@include blue-caption;
+	@include blue-colorpicker;
+	
+	@include blue-common;
+	
+	@include blue-datefield;
+	@include blue-inline-datefield;
+	@include blue-formlayout;
+	@include blue-gridlayout;
+	@include blue-label;
+	@include blue-link;
+	@include blue-menubar;
+	@include blue-notification;
+	@include blue-orderedlayout;
+	@include blue-panel;
+	@include blue-popupview;
+	@include blue-progressindicator;
+	@include blue-select;
+	@include blue-shadow;
+	@include blue-slider;
+	@include blue-splitpanel;
+	@include blue-table;
+	@include blue-tabsheet;
+	@include blue-textfield;
+	@include blue-tree;
+	@include blue-window;
+}

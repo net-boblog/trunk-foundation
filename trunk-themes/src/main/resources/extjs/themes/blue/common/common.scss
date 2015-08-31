@@ -1,0 +1,199 @@
+@mixin blue-common {
+
+&.v-app {
+	background: #F1F1F1;
+	font-family: arial, helvetica, sans-serif;
+	color: #222;
+	font-size: $font-size;
+	line-height: $line-height;
+}
+/* Global font styles */
+/* Global font styles */
+&.v-app,
+.v-window,
+.v-popupview-popup,
+.v-tooltip,
+&.v-app input,
+&.v-app select,
+&.v-app button,
+&.v-app textarea,
+.v-window input,
+.v-window select,
+.v-window button,
+.v-window textarea,
+.v-popupview-popup input,
+.v-popupview-popup select,
+.v-popupview-popup button,
+.v-popupview-popup textarea,
+.v-filterselect-suggestpopup,
+.v-datefield-popup,
+.v-contextmenu,
+.v-Notification,
+.v-menubar-submenu,
+.v-drag-element {
+	color: #464f52;
+	font-size: $font-size;
+}
+&.v-app select,
+.v-window select {
+	padding: 0;
+}
+&.v-app input[type=password] {
+    padding:2px 6px;
+}
+/* Custom tooltip */
+.v-tooltip {
+	background-color: #fffcdd;
+	border: 1px solid #b8b295;
+	border-top-color: #d5d2c1;
+	border-left-color: #d5d2c1;
+	font-size: 11px;
+	line-height: 14px;
+	color: #5d5444;
+}
+.v-tooltip-text {
+	padding: 2px 4px;
+	border: none;
+	border-top: 1px solid #fffef5;
+	border-bottom: 1px solid #fbf8d9;
+}
+.v-tooltip .v-errormessage {
+	padding: 3px 4px 3px 4px;
+	background: #ffecc6;
+	color: #b74100;
+	border: none;
+	border-top: 1px solid #fff3dc;
+	border-bottom: 1px solid #ead7b1;
+}
+.v-tooltip .v-errormessage h2 {
+	font-size: 16px;
+	font-weight: normal;
+	color: #ab3101;
+	margin: 2px 0 8px 0;
+}
+.v-tooltip .v-errormessage h3 {
+	font-size: 13px;
+	font-weight: bold;
+	margin: 1px 0 4px 0;
+}
+.v-contextmenu {
+	background: #e9eced url(../tabsheet/img/tab-bg.png);
+	background-color: #f6f7f7;
+	color: #464f52;
+	font-size: 12px;
+	line-height: 14px;
+}
+.v-contextmenu .gwt-MenuBar {
+	border-right: 1px solid #c6cbcc;
+	border-bottom: 1px solid #c6cbcc;
+	border-top: 1px solid #d0d4d5;
+	border-left: 1px solid #d0d4d5;
+}
+.v-contextmenu .gwt-MenuItem {
+	padding: 2px 0;
+}
+.v-contextmenu .gwt-MenuItem div {
+	padding: 1px 20px 1px 8px;
+}
+.v-contextmenu .gwt-MenuItem-selected div {
+	color: #fff;
+	background: #5daee8;
+}
+.v-contextmenu .gwt-MenuItem img {
+	margin-right: 10px;
+}
+/* Fix icon height to help browsers to load page smoother */
+.v-embedded-icon-16 img {
+	width:16px;
+	height:16px;
+}
+
+.soupe-view {
+    background-color: #F1F1F1;
+}
+
+.soupe-page-menu-bar {
+    background-color: #2d2d2d;
+    padding:5px 30px;
+}
+
+.soupe-page-menu-bar .v-link a {
+	color: #d5d5d5;
+}
+
+.soupe-page-menu-bar .v-link a:visited {
+    color: #d5d5d5;
+}
+
+.soupe-page-menu-bar .v-link a:hover {
+    color: #FFF;
+}
+
+.soupe-page-header {
+    background-color: #F1F1F1;
+    border-bottom:1px solid #E5E5E5;
+}
+
+.soupe-page-header .soupe-site-name {
+    font-size: 40px;
+    font-style: italic;
+    color: #999;
+    line-height: 45px;
+}
+
+.soupe-page-header-logo {
+
+}
+
+.soupe-page-left {
+    background-color: #FFF;
+    /*border-right:1px solid #E6E6E6;*/
+    padding:10px;
+    min-height: 400px;
+}
+
+.soupe-page-center-wrapper {
+    background-color: #FFF;
+}
+
+.soupe-page-center {
+    padding:10px;
+    min-height: 400px;
+}
+
+.soupe-page-footer {
+    border-top:1px solid #E5E5E5;
+    padding:10px 30px;
+}
+
+.soupe-page-footer .copyright {
+    text-align: right;
+    color: #999;
+    font-weight: bolder;
+}
+
+.soupe-login-form {
+    background-color: #F1F1F1;
+    border:1px solid #E5E5E5;
+    padding:20px;
+    margin-top:40px;
+}
+
+.soupe-login-form .v-slot {
+    padding: 5px 0px;
+}
+
+.soupe-login-form label {
+    font-size: 14px;
+}
+
+.v-slot-soupe-login-form-title {
+    height:20px !important;
+}
+
+.soupe-login-form-title {
+    font-size:16px;
+    font-weight: bold;
+}
+
+}

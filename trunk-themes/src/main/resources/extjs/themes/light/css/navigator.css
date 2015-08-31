@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+.soupe-left-navigator {
+    text-align: left;
+}
+
+.soupe-right-navigator {
+    text-align: left;
+}
+
+.entrance {
+    font-family: arial, helvetica, sans-serif, simhei;
+    font-size: 16px;
+    padding: 0px 0px 10px 0px;
+}
+
+.soupe-app-header {
+    height: 30px;
+    font-size: 14px;
+    font-family: arial, helvetica, sans-serif, simhei;
+    font-weight: bold;
+    color: #68a8dc;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.soupe-app-title {
+    float: left;
+    margin: 8px 0px 5px 5px;
+}
+
+.soupe-app-setting {
+    width: 22px;
+    height: 22px;
+    float: right;
+    margin: 5px 5px 5px 0px;
+}
+
+.soupe-app-center {
+    background-repeat: repeat-y;
+}
+
+.soupe-secondary-link {
+    min-height: 300px;
+}
+
+.soupe-secondary-link ul, li {
+    padding: 0px;
+    margin: 0px;
+}
+
+.soupe-secondary-link b {
+    display: block;
+    font-weight: normal;
+    padding: 6px 0px;
+}
+
+.soupe-secondary-link b:hover {
+    background: url(../images/mask_blue1.png);
+}
+
+.soupe-secondary-link A {
+    display: block;
+    height: 16px;
+    line-height: 16px;
+    padding-left: 20px;
+    /*color: #545e69;*/
+    width: auto;
+}
+
+.soupe-secondary-link A:hover {
+    text-decoration: none;
+}
+
+.soupe-secondary-link li {
+    margin: 0px 0px 0px 0px;
+    background: url(../images/icon_tree_3.png) 0px 6px no-repeat;
+}
+
+.soupe-secondary-link ul b {
+    padding-left: 30px;
+}
+
+.soupe-secondary-link ul ul b {
+    padding-left: 51px;
+}
+
+.soupe-secondary-link ul ul ul b {
+    padding-left: 72px;
+}
+
+.soupe-secondary-link ul li {
+    background-position: 30px 6px;
+}
+
+.soupe-secondary-link ul ul li {
+    background-position: 51px 6px;
+}
+
+.soupe-secondary-link ul ul ul li {
+    background-position: 73px 6px;
+}
+
+.soupe-secondary-link .closed ul {
+    display: none !important;
+}
+
+.soupe-secondary-link .opened ul {
+    display: block;
+}
+
+.soupe-secondary-link .closed {
+    background-image: url(../images/icon_tree_1.png);
+}
+
+.soupe-secondary-link .opened {
+    background-image: url(../images/icon_tree_2.png);
+}
+
+.soupe-secondary-link .current {
+    background-image: url(../images/icon_tree_4.png);
+}
+
+.soupe-secondary-link .current b {
+    background: url(../images/mask_orange1.png);
+}
+
+.soupe-app-bottom {
+    height: 3px;
+    font-size: 0px;
+}
