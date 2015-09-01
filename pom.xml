@@ -16,6 +16,7 @@
         <module>trunk-workbook</module>
         <module>trunk-util</module>
         <module>trunk-themes</module>
+        <module>trunk-data</module>
     </modules>
     <scm>
         <url>https://github.com/TumbleweedLeaf/trunk-foundation</url>
