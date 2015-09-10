@@ -16,5 +16,15 @@
             <artifactId>trunk-util</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.tumbleweed.platform.trunk</groupId>
+            <artifactId>trunk-hibernate</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.tumbleweed.platform.trunk</groupId>
+            <artifactId>trunk-spring-data</artifactId>
+            <version>${project.version}</version>
+        </dependency>
     </dependencies>
 </project>

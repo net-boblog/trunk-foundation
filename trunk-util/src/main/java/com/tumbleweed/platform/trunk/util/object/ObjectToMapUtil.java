@@ -27,7 +27,7 @@ public final class ObjectToMapUtil {
             String propertyName = descriptor.getName();
             if (!propertyName.equals("class")) {
                 Method readMethod = descriptor.getReadMethod();
-                Object result = readMethod.invoke(bean, new Object[0]);
+                Object result = readMethod.invoke(bean);
                 if (result != null) {
                     returnMap.put(propertyName, result);
                 } else {
