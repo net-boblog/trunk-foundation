@@ -17,6 +17,8 @@
         <module>trunk-util</module>
         <module>trunk-themes</module>
         <module>trunk-data</module>
+        <module>trunk-common</module>
+        <module>trunk-scheduler</module>
     </modules>
     <scm>
         <url>https://github.com/TumbleweedLeaf/trunk-foundation</url>

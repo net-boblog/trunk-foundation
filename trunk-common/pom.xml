@@ -8,13 +8,14 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <name>Trunk Workbook</name>
-    <artifactId>trunk-workbook</artifactId>
+    <packaging>jar</packaging>
+    <artifactId>trunk-common</artifactId>
     <dependencies>
         <dependency>
             <groupId>com.tumbleweed.platform.trunk</groupId>
-            <artifactId>trunk-util</artifactId>
-            <version>${project.version}</version>
+            <artifactId>trunk-dependency-common</artifactId>
+            <type>pom</type>
         </dependency>
     </dependencies>
+
 </project>

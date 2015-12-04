@@ -14,33 +14,8 @@
     <dependencies>
         <dependency>
             <groupId>com.tumbleweed.platform.trunk</groupId>
-            <artifactId>trunk-dependency-common</artifactId>
-            <type>pom</type>
-        </dependency>
-        <dependency>
-            <groupId>com.tumbleweed.platform.trunk</groupId>
-            <artifactId>trunk-spring</artifactId>
-            <type>pom</type>
-        </dependency>
-        <dependency>
-            <groupId>com.tumbleweed.platform.trunk</groupId>
-            <artifactId>trunk-spring-data</artifactId>
-            <type>pom</type>
-        </dependency>
-        <dependency>
-            <groupId>com.tumbleweed.platform.trunk</groupId>
-            <artifactId>trunk-spring-security</artifactId>
-            <type>pom</type>
-        </dependency>
-        <dependency>
-            <groupId>com.tumbleweed.platform.trunk</groupId>
-            <artifactId>trunk-spring-ws</artifactId>
-            <type>pom</type>
-        </dependency>
-        <dependency>
-            <groupId>com.tumbleweed.platform.trunk</groupId>
-            <artifactId>trunk-tiles</artifactId>
-            <type>pom</type>
+            <artifactId>trunk-base</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 </project>

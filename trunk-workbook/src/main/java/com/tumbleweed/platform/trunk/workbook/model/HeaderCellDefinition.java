@@ -35,7 +35,7 @@ public class HeaderCellDefinition implements Serializable {
     private int endColumn;
 
     /**
-     * 单元格背景色，参见{@link com.mittop.product.bms.common.workbook.ColorPicker}
+     * 单元格颜色
      */
     private XSSFColor cellColor;
 

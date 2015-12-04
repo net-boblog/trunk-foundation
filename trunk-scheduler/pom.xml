@@ -8,13 +8,21 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
-    <name>Trunk Workbook</name>
-    <artifactId>trunk-workbook</artifactId>
+    <packaging>jar</packaging>
+    <artifactId>trunk-scheduler</artifactId>
     <dependencies>
         <dependency>
             <groupId>com.tumbleweed.platform.trunk</groupId>
-            <artifactId>trunk-util</artifactId>
-            <version>${project.version}</version>
+            <artifactId>trunk-data</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.tumbleweed.platform.trunk</groupId>
+            <artifactId>trunk-base</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.tumbleweed.platform.trunk</groupId>
+            <artifactId>trunk-quartz-scheduler</artifactId>
+            <type>pom</type>
         </dependency>
     </dependencies>
 </project>
