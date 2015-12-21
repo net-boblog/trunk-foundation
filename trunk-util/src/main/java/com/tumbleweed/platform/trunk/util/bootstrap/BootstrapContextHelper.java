@@ -7,6 +7,7 @@ import java.util.Collection;
 import java.util.Map;
 
 public class BootstrapContextHelper {
+
     private static ApplicationContext appContext;
 
     public static void setAppContext(ApplicationContext appContext) {
