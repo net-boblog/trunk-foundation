@@ -27,8 +27,8 @@ import java.util.Properties;
 @ImportResource({"classpath:/soupe-data-context.xml"})
 @EnableJpaRepositories(
         basePackages = {
-                "com.mittop.platform.soupe.core.repository.jpa",
-                "com.mittop.platform.soupe.*.core.repository.jpa"
+                "com.tumbleweed.platform.trunk.core.repository.jpa",
+                "com.tumbleweed.platform.trunk.*.core.repository.jpa"
         }
 )
 public class SoupeDataConfig implements SoupeConfig {
