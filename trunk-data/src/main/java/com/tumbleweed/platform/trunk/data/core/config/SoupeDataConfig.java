@@ -1,5 +1,6 @@
 package com.tumbleweed.platform.trunk.data.core.config;
 
+import com.tumbleweed.platform.trunk.base.config.TrunkConfig;
 import com.tumbleweed.platform.trunk.data.core.component.SoupeLocalContainerEntityManagerFactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -24,28 +25,28 @@ import java.util.List;
 import java.util.Properties;
 
 @Configuration
-@ImportResource({"classpath:/soupe-data-context.xml"})
+@ImportResource({"classpath:/script/soupe-data-context.xml"})
 @EnableJpaRepositories(
         basePackages = {
                 "com.tumbleweed.platform.trunk.core.repository.jpa",
                 "com.tumbleweed.platform.trunk.*.core.repository.jpa"
         }
 )
-public class SoupeDataConfig implements SoupeConfig {
+public class SoupeDataConfig implements TrunkConfig {
 
-    @Value("${soupe.persistence.type}")
+    @Value("${trunk.persistence.type}")
     private String type;
-    @Value("${soupe.persistence.dialect}")
+    @Value("${trunk.persistence.dialect}")
     private String dialect;
-    @Value("${soupe.persistence.username}")
+    @Value("${trunk.persistence.username}")
     private String defaultSchema;
-    @Value("${soupe.persistence.showsql}")
+    @Value("${trunk.persistence.showsql}")
     private boolean showsql;
-    @Value("${soupe.persistence.generateDdl}")
+    @Value("${trunk.persistence.generateDdl}")
     private boolean generateDdl;
-    @Value("${soupe.persistence.entity.packages}")
+    @Value("${trunk.persistence.entity.packages}")
     private String entityPackages;
-    @Value("${soupe.persistence.cache.enabled}")
+    @Value("${trunk.persistence.cache.enabled}")
     private boolean cacheEnabled;
 
     @Bean(name = "entityManagerFactory")
@@ -56,7 +57,7 @@ public class SoupeDataConfig implements SoupeConfig {
                 localContainerEntityManagerFactoryBean
                 = new SoupeLocalContainerEntityManagerFactoryBean();
 
-        localContainerEntityManagerFactoryBean.setPersistenceUnitName("SOUPE");
+        localContainerEntityManagerFactoryBean.setPersistenceUnitName("TRUNK");
 
         localContainerEntityManagerFactoryBean
                 .setDataSource(dataSource);
@@ -115,7 +116,6 @@ public class SoupeDataConfig implements SoupeConfig {
     public PlatformTransactionManager getTransactionManager(EntityManagerFactory entityManagerFactory) {
         JpaTransactionManager transactionManager = new JpaTransactionManager();
         transactionManager.setEntityManagerFactory(entityManagerFactory);
-
         return transactionManager;
     }
 

@@ -1,4 +1,4 @@
-package com.tumbleweed.platform.trunk.util.bootstrap;
+package com.tumbleweed.platform.trunk.base.util;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.io.Resource;
@@ -7,7 +7,6 @@ import java.util.Collection;
 import java.util.Map;
 
 public class BootstrapContextHelper {
-
     private static ApplicationContext appContext;
 
     public static void setAppContext(ApplicationContext appContext) {
