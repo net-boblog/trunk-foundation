@@ -32,7 +32,7 @@ import java.util.Properties;
                 "com.tumbleweed.platform.trunk.*.core.repository.jpa"
         }
 )
-public class SoupeDataConfig implements TrunkConfig {
+public class TrunkDataConfig implements TrunkConfig {
 
     @Value("${trunk.persistence.type}")
     private String type;
