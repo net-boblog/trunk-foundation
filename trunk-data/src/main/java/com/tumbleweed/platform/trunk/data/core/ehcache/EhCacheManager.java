@@ -6,6 +6,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import java.io.File;
+import java.net.URL;
 
 /**
  * Created by mylover on 1/12/16.
@@ -28,9 +29,9 @@ public class EhCacheManager implements CacheManagerEventListener {
             String userDir = System.getProperty("user.dir");
             fullPath = userDir + File.separator + this.ehcachePath;
         }
-
         logger.info("fullPath:" + fullPath);
-        this.cacheManager = CacheManager.create(fullPath);
+        URL url = getClass().getResource(fullPath);
+        this.cacheManager = new CacheManager(url);
         this.cacheManager.setCacheManagerEventListener(this);
         logger.info("cache manager finished...");
     }
@@ -43,7 +44,7 @@ public class EhCacheManager implements CacheManagerEventListener {
         try {
             Cache e = this.cacheManager.getCache(cacheName);
             if(e != null && e.get(key) != null) {
-                return e.get(key).getValue();
+                return e.get(key).getObjectValue();
             }
         } catch (Exception var4) {
             var4.printStackTrace();
@@ -90,7 +91,7 @@ public class EhCacheManager implements CacheManagerEventListener {
             Cache e = this.cacheManager.getCache(cacheName);
             if(e != null) {
                 long size = e.calculateInMemorySize();
-                logger.info("used memory size ["+Long.valueOf(size / 1000L)+"] KB of ["+cacheName+"] cache...");
+                logger.info("used memory size ["+ Long.valueOf(size / 1000L) + "] KB of [" + cacheName + "] cache...");
                 return size;
             }
 
@@ -106,7 +107,6 @@ public class EhCacheManager implements CacheManagerEventListener {
         if(this.cacheManager != null) {
             this.cacheManager.shutdown();
         }
-
     }
 
     public void dispose() throws CacheException {
@@ -140,19 +140,19 @@ public class EhCacheManager implements CacheManagerEventListener {
 
     }
 
-    public boolean isFullPath() {
-        return this.isFullPath;
-    }
-
-    public void setFullPath(boolean isFullPath) {
-        this.isFullPath = isFullPath;
-    }
-
     public String getEhcachePath() {
         return this.ehcachePath;
     }
 
     public void setEhcachePath(String ehcachePath) {
         this.ehcachePath = ehcachePath;
+    }
+
+    public boolean isFullPath() {
+        return isFullPath;
+    }
+
+    public void setFullPath(boolean isFullPath) {
+        this.isFullPath = isFullPath;
     }
 }
