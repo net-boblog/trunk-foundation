@@ -1,7 +1,6 @@
 package com.tumbleweed.platform.trunk.data.core.config;
 
 import com.tumbleweed.platform.trunk.base.config.TrunkConfig;
-import com.tumbleweed.platform.trunk.data.core.component.SoupeLocalContainerEntityManagerFactoryBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -55,7 +54,7 @@ public class TrunkDataConfig implements TrunkConfig {
             DataSource dataSource, JpaDialect jpaDialect) {
         LocalContainerEntityManagerFactoryBean
                 localContainerEntityManagerFactoryBean
-                = new SoupeLocalContainerEntityManagerFactoryBean();
+                = new LocalContainerEntityManagerFactoryBean();
 
         localContainerEntityManagerFactoryBean.setPersistenceUnitName("TRUNK");
 
