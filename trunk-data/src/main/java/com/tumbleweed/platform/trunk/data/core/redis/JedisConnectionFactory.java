@@ -16,7 +16,6 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 import redis.clients.jedis.JedisShardInfo;
-import redis.clients.util.Pool;
 
 /**
  * Created by mylover on 1/20/16.
@@ -109,7 +108,7 @@ public class JedisConnectionFactory implements InitializingBean, DisposableBean,
     public JedisConnection getConnection() {
         Jedis jedis = this.fetchJedisConnector();
         return this.postProcessConnection(this.usePool?new JedisConnection(jedis, this.pool,
-                this.dbIndex):new JedisConnection(jedis, (Pool)null, this.dbIndex));
+                this.dbIndex):new JedisConnection(jedis, null, this.dbIndex));
     }
 
     public DataAccessException translateExceptionIfPossible(RuntimeException ex) {

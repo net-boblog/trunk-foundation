@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ErrorCode>
+
+	<!-- 内部错误 (111000-111099) -->
+	<error code="100000">平台故障，给您带来不便敬请谅解！</error>
+
+
+</ErrorCode>
