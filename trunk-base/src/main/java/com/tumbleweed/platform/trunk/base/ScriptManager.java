@@ -3,10 +3,13 @@ package com.tumbleweed.platform.trunk.base;
 import com.tumbleweed.platform.trunk.base.alarm.AbstractMessage;
 import com.tumbleweed.platform.trunk.base.alarm.AbstractMessage.AlarmLevel;
 import com.tumbleweed.platform.trunk.base.constants.Constants;
+import com.tumbleweed.platform.trunk.base.disp.RouteInfo.RouteModule;
 import com.tumbleweed.platform.trunk.base.exception.AbstractException;
 import com.tumbleweed.platform.trunk.base.exception.TrunkRuntimeException;
+import com.tumbleweed.platform.trunk.base.util.FileAccessor;
 import com.tumbleweed.platform.trunk.base.util.FileAccessorListener;
 import com.tumbleweed.platform.trunk.base.util.TextUtil;
+import com.tumbleweed.platform.trunk.base.util.XMLUtil;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.dom4j.Element;
@@ -61,9 +64,6 @@ public class ScriptManager  implements ApplicationContextAware, FileAccessorList
      */
     private Map<String, String> codeReflectCache = new HashMap<String, String>();
 
-    private Map<String, Object> vipAccountCache = new HashMap<String, Object>();
-
-    private Map<String, Object> assignAccountCache = new HashMap<String, Object>();
 
     /**
      * not check all of request
@@ -71,24 +71,9 @@ public class ScriptManager  implements ApplicationContextAware, FileAccessorList
     private ArrayList<String> NOT_CHECK_ACCOUNT_RIGHT_LIST = new ArrayList<String>();
 
     /**
-     * not check account balance request
-     */
-    private ArrayList<String> NOT_CHECK_ACCOUNT_BALANCE_LIST = new ArrayList<String>();
-
-    /**
      * not check account state request
      */
     private ArrayList<String> NOT_CHECK_ACCOUNT_STATE_LIST = new ArrayList<String>();
-
-    /**
-     * Number Black list
-     */
-    private ArrayList<String> MDN_BLACK_LIST = new ArrayList<String>();
-
-    /**
-     * Proxy app list
-     */
-    private ArrayList<String> APP_PROXY_LIST = new ArrayList<String>();
 
     /**
      * spring application context
@@ -211,23 +196,12 @@ public class ScriptManager  implements ApplicationContextAware, FileAccessorList
             loadGeneralConfig(getBaseCache(Constants.GENERAL_FILE_NAME));
             // 初始化权限
             loadRight(getBaseCache(Constants.UNCHECKRIGHT_NAME));
-            // 初始化号码黑名单
-            loadNumberBlackList(getBaseCache(Constants.MDN_BLACK_LIST_NAME));
             // 初始化错误码映射
             loadCodeReflect(getBaseCache(Constants.ERROR_REFLECT_FILE_NAME));
-            // 初始化VIP帐号
-            AccountDao accountDao = context.getBean(AccountDao.class);
-            loadVipAccount(accountDao);
-            // 初始化assign帐号
-            loadAssignAccount(accountDao);
-            // 初始化代理配置
-            AppDao appDao = context.getBean(AppDao.class);
-            loadProxyConfig(appDao);
-
             log.info("ScriptManager init finished.");
         } catch (Exception e) {
             log.error("setApplicationContext: ", e);
-            throw new CCPRuntimeException(ScriptManager.buildError("111018"));
+            throw new TrunkRuntimeException(ScriptManager.buildError("111018"));
         }
     }
 
@@ -318,23 +292,6 @@ public class ScriptManager  implements ApplicationContextAware, FileAccessorList
     }
 
     /**
-     * load assign account
-     *
-     * @param accountDao
-     * @throws CCPDaoException
-     */
-    public void loadAssignAccount(AccountDao accountDao) {
-        assignAccountCache.clear();
-        List<AssignAccount> list = accountDao.queryAssignAccount();
-        if (list != null) {
-            for (AssignAccount account : list) {
-                log.info("account {}", account.getAccountSid());
-                assignAccountCache.put(account.getAccountSid(), account);
-            }
-        }
-    }
-
-    /**
      * @param fileName
      * @param filePath
      * @throws IOException
@@ -360,6 +317,31 @@ public class ScriptManager  implements ApplicationContextAware, FileAccessorList
         }
         moduleCache.remove(fileName);
         moduleCache.put(fileName, configList);
+    }
+
+    /**
+     * 加载权限
+     * @param appPath
+     * @throws IOException
+     */
+    public void loadRight(String appPath) throws IOException {
+        NOT_CHECK_ACCOUNT_RIGHT_LIST.clear();
+        NOT_CHECK_ACCOUNT_STATE_LIST.clear();
+
+        XMLUtil xmlUtil = new XMLUtil(new FileInputStream(new File(appPath)));
+        List<Element> elements = xmlUtil.getChildElementList();
+        for (Element element : elements) {
+            String name = element.getName();
+            String text = element.getTextTrim();
+            log.info("name: " + name + ", text: " + text);
+            if ("right".equals(name)) {
+                NOT_CHECK_ACCOUNT_RIGHT_LIST.add(text);
+            } else if ("state".equals(name)) {
+                NOT_CHECK_ACCOUNT_STATE_LIST.add(text);
+            } else {
+                log.warn("found the undefined right.");
+            }
+        }
     }
 
     private Config loadConfig(List<Element> elements) {
@@ -447,60 +429,6 @@ public class ScriptManager  implements ApplicationContextAware, FileAccessorList
         }
     }
 
-    public void loadRight(String appPath) throws IOException {
-        NOT_CHECK_ACCOUNT_RIGHT_LIST.clear();
-        NOT_CHECK_ACCOUNT_BALANCE_LIST.clear();
-        NOT_CHECK_ACCOUNT_STATE_LIST.clear();
-
-        XMLUtil xmlUtil = new XMLUtil(new FileInputStream(new File(appPath)));
-        List<Element> elements = xmlUtil.getChildElementList();
-        for (Element element : elements) {
-            String name = element.getName();
-            String text = element.getTextTrim();
-            log.info("name: " + name + ", text: " + text);
-            if ("right".equals(name)) {
-                NOT_CHECK_ACCOUNT_RIGHT_LIST.add(text);
-            } else if ("fee".equals(name)) {
-                NOT_CHECK_ACCOUNT_BALANCE_LIST.add(text);
-            } else if ("state".equals(name)) {
-                NOT_CHECK_ACCOUNT_STATE_LIST.add(text);
-            } else {
-                log.warn("found the undefined right.");
-            }
-        }
-    }
-
-    public void loadNumberBlackList(String appPath) throws IOException {
-        MDN_BLACK_LIST.clear();
-
-        XMLUtil xmlUtil = new XMLUtil(new FileInputStream(new File(appPath)));
-        List<Element> elements = xmlUtil.getChildElementList();
-        for (Element element : elements) {
-            String name = element.getName();
-            String text = element.getTextTrim();
-            log.info("name: " + name + ", text: " + text);
-            if ("item".equals(name)) {
-                MDN_BLACK_LIST.add(text);
-            } else {
-                log.warn("found the undefined right.");
-            }
-        }
-    }
-
-    /**
-     * load proxy
-     *
-     * @param appDao
-     */
-    public void loadProxyConfig(AppDao appDao) {
-        APP_PROXY_LIST.clear();
-        List<App> list = appDao.getProxyApp();
-        if (list != null) {
-            for (App app : list) {
-                APP_PROXY_LIST.add(app.getAppId());
-            }
-        }
-    }
 
     /**
      * script config key
@@ -576,41 +504,11 @@ public class ScriptManager  implements ApplicationContextAware, FileAccessorList
         }
     }
 
-    public boolean isProxy(String mdn) {
-        if (APP_PROXY_LIST.contains(mdn)) {
-            return true;
-        }
-
-        return false;
-    }
-
-    public boolean isBlackListNumber(String mdn) {
-        for (String element : MDN_BLACK_LIST) {
-            if (mdn.equals(element)) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public boolean isCheckAccountBalance(String uri) {
-        for (String element : NOT_CHECK_ACCOUNT_BALANCE_LIST) {
-            if (uri.indexOf(element) > -1) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    public boolean isCheckAccountState(String uri) {
-        for (String element : NOT_CHECK_ACCOUNT_STATE_LIST) {
-            if (uri.indexOf(element) > -1) {
-                return false;
-            }
-        }
-        return true;
-    }
-
+    /**
+     * 是否不校验
+     * @param uri
+     * @return
+     */
     public boolean isCheckRight(String uri) {
         for (String element : NOT_CHECK_ACCOUNT_RIGHT_LIST) {
             if (uri.indexOf(element) > -1) {
@@ -670,7 +568,7 @@ public class ScriptManager  implements ApplicationContextAware, FileAccessorList
      * @return
      */
     public static String getRESTSN() {
-        return ScriptManager.getScriptManager().getLocalConfig(Constants.RESTSN);
+        return ScriptManager.getScriptManager().getLocalConfig(Constants.SERVER_SERIAL);
     }
 
 }
