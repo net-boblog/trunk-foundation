@@ -562,13 +562,4 @@ public class ScriptManager  implements ApplicationContextAware, FileAccessorList
         this.scriptDirPath = scriptDirPath;
     }
 
-    /**
-     * Get REST number
-     *
-     * @return
-     */
-    public static String getRESTSN() {
-        return ScriptManager.getScriptManager().getLocalConfig(Constants.SERVER_SERIAL);
-    }
-
 }

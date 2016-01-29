@@ -21,5 +21,4 @@ public interface Constants {
     public static final String MDN_BLACK_LIST_NAME = "NumberBlackList";
     public static final String ERROR_REFLECT_FILE_NAME = "ErrorCodeReflect";
 
-    public static final String SERVER_SERIAL = "SERVER_SERIAL";
 }
